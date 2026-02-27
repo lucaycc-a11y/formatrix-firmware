@@ -15,6 +15,13 @@ endif
 if SHIELD_FORMATRIX_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "FORM.MATRIX"
+    default "FORM.MATRIX R"
+
+endif
+
+if SHIELD_FORMATRIX_LEFT || SHIELD_FORMATRIX_RIGHT
+
+config ZMK_SPLIT
+    default y
 
 endif

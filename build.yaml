@@ -3,9 +3,9 @@
 
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: formatrix_left
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: formatrix_right
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: settings_reset
