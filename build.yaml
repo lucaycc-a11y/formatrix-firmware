@@ -1,4 +1,5 @@
-# FORM.MATRIX using Caldera hardware config
+# FORM.MATRIX Firmware Build
+# Uses Caldera hardware config
 
 ---
 include:

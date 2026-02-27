@@ -1,7 +1,10 @@
+# FORM.MATRIX Configuration
+# Copyright (c) 2026 FORM LABS
+
 if SHIELD_CALDERA_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Caldera"
+    default "FORM.MATRIX"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
