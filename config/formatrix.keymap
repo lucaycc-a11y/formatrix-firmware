@@ -5,18 +5,31 @@
  * 
  * Bluetooth Name: FORM.MATRIX
  * 
- * Layers:
- * - Layer 0: Default (1234...QWERTY)
- * - Layer 1: Function keys (F1-F12) + symbols (hold LOWER)
- * - Layer 2: Bluetooth switching (hold RAISE)
- * - Layer 3: Reset/Bootloader (hold LOWER + RAISE)
+ * 配對流程：
+ * 1. 開機 → 自動進入 advertising 模式
+ * 2. LED 閃爍 = 等待配對
+ * 3. 配對完成 → LED 常亮
+ * 4. 下次開機 → 自動連接
  */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
+    // Auto-start Bluetooth advertising on boot
+    behaviors {
+        auto_bt: auto_bt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            tapping-term-ms = <0>;
+            quick-tap-ms = <0>;
+            flavor = "hold";
+            bindings = <&bt BT_ADV_ALL>, <&trans>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
