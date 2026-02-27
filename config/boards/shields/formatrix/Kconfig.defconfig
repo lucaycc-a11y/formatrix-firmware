@@ -1,0 +1,20 @@
+# FORM.MATRIX - Default Configuration
+# Copyright (c) 2026 FORM LABS
+# SPDX-License-Identifier: MIT
+
+if SHIELD_FORMATRIX_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "FORM.MATRIX"
+
+config ZMK_BLE_PASSKEY_ENTRY
+    default y
+
+endif
+
+if SHIELD_FORMATRIX_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "FORM.MATRIX"
+
+endif

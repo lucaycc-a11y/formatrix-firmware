@@ -1,0 +1,20 @@
+# Auto-generated files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Build artifacts
+/build/
+*.uf2
+
+# IDE
+.vscode/
+.idea/
+
+# ZMK
+.bootstrap/
+/modules/
+/tools/
+/zephyr/
+west.yml.lock

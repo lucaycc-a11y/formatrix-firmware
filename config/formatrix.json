@@ -1,0 +1,29 @@
+{
+  "name": "FORM.MATRIX",
+  "vendor": "FORM LABS",
+  "url": "https://FORMhk.com",
+  "maintainer": "Luca Yau",
+  "tags": [
+    "split",
+    "wireless",
+    "bluetooth",
+    "ergonomic",
+    "nice_nano",
+    "nrf52840",
+    "form_labs"
+  ],
+  "features": [
+    "keys",
+    "bluetooth"
+  ],
+  "products": [
+    {
+      "name": "FORM.MATRIX Left",
+      "id": "0x4D4154"
+    },
+    {
+      "name": "FORM.MATRIX Right",
+      "id": "0x4D4155"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+# FORM.MATRIX - Split Wireless Keyboard
+# Copyright (c) 2026 FORM LABS
+# SPDX-License-Identifier: MIT
+
+config SHIELD_FORMATRIX
+    def_bool $(shields_list_contains,formatrix)
+
+config SHIELD_FORMATRIX_LEFT
+    def_bool $(shields_list_contains,formatrix_left)
+
+config SHIELD_FORMATRIX_RIGHT
+    def_bool $(shields_list_contains,formatrix_right)

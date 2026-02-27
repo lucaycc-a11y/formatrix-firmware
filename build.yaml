@@ -1,0 +1,11 @@
+# FORM.MATRIX - GitHub Actions Build Matrix
+# Copyright (c) 2026 FORM LABS
+
+---
+include:
+  - board: nice_nano_v2
+    shield: formatrix_left
+  - board: nice_nano_v2
+    shield: formatrix_right
+  - board: nice_nano_v2
+    shield: settings_reset
