@@ -1,11 +1,10 @@
-# FORM.MATRIX - GitHub Actions Build Matrix
-# Copyright (c) 2026 FORM LABS
+# FORM.MATRIX using Caldera hardware config
 
 ---
 include:
   - board: nice_nano
-    shield: formatrix_left
+    shield: caldera_left
   - board: nice_nano
-    shield: formatrix_right
+    shield: caldera_right
   - board: nice_nano
     shield: settings_reset

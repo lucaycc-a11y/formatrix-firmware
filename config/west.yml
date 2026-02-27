@@ -1,6 +1,3 @@
-# FORM.MATRIX - West Manifest
-# Copyright (c) 2026 FORM LABS
-
 manifest:
   remotes:
     - name: zmkfirmware
