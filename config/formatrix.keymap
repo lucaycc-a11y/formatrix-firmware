@@ -1,13 +1,8 @@
 /*
  * FORM.MATRIX - Custom Split Keyboard
- * Company: FORM LABS (Private Project)
+ * Company: FORM LABS
  * Controller: Pro Micro NRF52840 (nice!nano V2.0)
- * 
  * Bluetooth Name: FORM.MATRIX
- * 
- * 特殊功能：
- * - 开机时两边同时按住 SPACE = 进入 Bootloader（替代 reset button）
- * - 开机自动进入蓝牙配对模式
  */
 
 #include <behaviors.dtsi>
@@ -15,21 +10,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    // Bootloader behavior - hold SPACE during boot to enter bootloader
-    behaviors {
-        boot: boot {
-            compatible = "zmk,behavior-sensor";
-            #binding-cells = <0>;
-            bindings = <&bootloader>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
-        // ============================================================
-        // Layer 0: Default Layer
-        // ============================================================
         default_layer {
             bindings = <
    &kp GRAVE  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5           &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp BSPC
@@ -38,13 +21,8 @@
    &kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B            &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RET
    &kp LCTRL  &kp LALT   &kp LGUI   &mo 1      &kp SPACE  &kp SPACE        &kp SPACE  &kp SPACE  &mo 2      &kp LARW   &kp DARW   &kp RARW
             >;
-
-            sensor-bindings = <&boot>;
         };
 
-        // ============================================================
-        // Layer 1: Function Keys + Symbols (LOWER)
-        // ============================================================
         lower_layer {
             bindings = <
    &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6          &kp F7     &kp F8     &kp F9     &kp F10    &kp F11    &kp F12
@@ -55,9 +33,6 @@
             >;
         };
 
-        // ============================================================
-        // Layer 2: Bluetooth Layer (RAISE)
-        // ============================================================
         raise_layer {
             bindings = <
    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR      &trans     &trans     &trans     &trans     &trans     &trans
@@ -68,9 +43,6 @@
             >;
         };
 
-        // ============================================================
-        // Layer 3: Adjust Layer (LOWER + RAISE) - RESET
-        // ============================================================
         adjust_layer {
             bindings = <
    &bootloader   &trans     &trans     &trans     &trans     &trans          &trans     &trans     &trans     &trans     &trans     &trans
